@@ -9,7 +9,8 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
         <property name="nombre" value="Alumnos backend desde XML configuracion"/>
     </bean>
 
-    <bean id="documentoExcel" class="edu.cibertec.beans.DocumentoExcel">
+    <bean id="documentoExcel" class="edu.cibertec.beans.DocumentoExcel"
+        init-method="iniciar" destroy-method="destruir">
     </bean>
 
     <bean id="documentoTexto" class="edu.cibertec.beans.DocumentoTexto">
