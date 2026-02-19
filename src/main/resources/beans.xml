@@ -12,8 +12,17 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="documentoExcel" class="edu.cibertec.beans.DocumentoExcel">
     </bean>
 
+    <bean id="documentoTexto" class="edu.cibertec.beans.DocumentoTexto">
+    </bean>
+
+    <!--
     <bean id="impresoraService" class="edu.cibertec.beans.edu.pe.cibertec.service.ImpresoraService">
-        <property name="documento" ref="documentoExcel"/>
+        <property name="documento" ref="documentoTexto"/>
+    </bean>
+    -->
+
+    <bean id="impresoraService" class="edu.cibertec.beans.edu.pe.cibertec.service.ImpresoraService">
+        <constructor-arg ref="documentoTexto"/>
     </bean>
 
 </beans>
