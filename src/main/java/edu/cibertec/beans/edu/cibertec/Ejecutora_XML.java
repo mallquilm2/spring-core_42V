@@ -16,6 +16,12 @@ public class Ejecutora_XML {
         //Utilizamos el  meétodo saludar
         h1.saludar();
 
+        HolaMundo h2 = (HolaMundo) contexto.getBean("holaMundo");
+        System.out.println("Compara posiciones de memoria = "+h1+ "-"+h2);
+        h2.setNombre("Segundo nombre");
+        h2.saludar();
+        System.out.println("Valor del nombre la primera instancia del bean h1 = "+h1.getNombre());
+
         ImpresoraService impresoraService = (ImpresoraService) contexto.getBean("impresoraService");
         impresoraService.imprimirDocumento();
 
