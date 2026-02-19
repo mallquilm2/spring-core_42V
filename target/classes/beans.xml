@@ -9,4 +9,11 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
         <property name="nombre" value="Alumnos backend desde XML configuracion"/>
     </bean>
 
+    <bean id="documentoExcel" class="edu.cibertec.beans.DocumentoExcel">
+    </bean>
+
+    <bean id="impresoraService" class="edu.cibertec.beans.edu.pe.cibertec.service.ImpresoraService">
+        <property name="documento" ref="documentoExcel"/>
+    </bean>
+
 </beans>
