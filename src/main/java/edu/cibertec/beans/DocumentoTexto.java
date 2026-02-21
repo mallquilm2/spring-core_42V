@@ -1,5 +1,8 @@
 package edu.cibertec.beans;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class DocumentoTexto implements Imprimible{
 
     private void iniciar(){
