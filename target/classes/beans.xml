@@ -2,10 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                             http://www.springframework.org/schema/beans/spring-beans.xsd
                             http://www.springframework.org/schema/context
-                            http://www.springframework.org/schema/context/spring-context.xsd"
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/aop
+                            http://www.springframework.org/schema/aop/spring-aop.xsd"
                             default-init-method="iniciar" default-destroy-method="destruir">
 
     <context:component-scan base-package="edu.cibertec"/>
@@ -29,5 +32,14 @@
     <bean id="impresoraService" class="edu.cibertec.beans.edu.pe.cibertec.service.ImpresoraService">
         <constructor-arg ref="documentoTexto"/>
     </bean>
+
+    <aop:config>
+        <aop:aspect id="aspectoAuditoria" ref="auditoriaAOP">
+            <aop:pointcut id="misBeans" expression="execution(*"/>
+            <aop:before method="alertarAntes" pointcut-ref="misBeans"/>
+            <aop:after method="alertarDespues" pointcut-ref="misBeans"/>
+            <aop:after-throwing method="alertarException" pointcut-ref="misBeans"/>
+        </aop:aspect>
+    </aop:config>
 
 </beans>

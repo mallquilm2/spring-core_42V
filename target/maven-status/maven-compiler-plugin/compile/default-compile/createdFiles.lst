@@ -4,5 +4,6 @@ edu/cibertec/beans/edu/pe/cibertec/service/ImpresoraService.class
 edu/cibertec/beans/edu/cibertec/Ejecutora_XML.class
 edu/cibertec/beans/DocumentoExcel.class
 edu/cibertec/beans/Imprimible.class
+edu/cibertec/beans/edu/pe/cibertec/service/AuditoriaAOP.class
 edu/cibertec/beans/HolaMundo.class
 edu/cibertec/beans/edu/pe/cibertec/config/AppConfig.class
