@@ -11,7 +11,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @ComponentScan(basePackages = {"edu.cibertec"})
-@EnableAspectJAutoProxy
 public class AppConfig {
 
     @Bean
