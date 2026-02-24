@@ -2,5 +2,5 @@ package edu.cibertec.beans;
 
 public interface Imprimible {
 
-    String imprimir();
+    String imprimir() throws InterruptedException;
 }

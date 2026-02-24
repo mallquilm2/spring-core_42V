@@ -18,7 +18,7 @@ public class ImpresoraService {
     @Qualifier("documentoTexto")
     private Imprimible documento;
 
-    public void imprimirDocumento(){
+    public void imprimirDocumento() throws InterruptedException {
         System.out.println("Imprimendo documento -->"+getDocumento().imprimir());
     }
 

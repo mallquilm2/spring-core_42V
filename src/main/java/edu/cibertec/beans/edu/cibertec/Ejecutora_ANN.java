@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Ejecutora_ANN {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Aperturamos el contexto de spring con la configuración por annotacion
         ApplicationContext contexto = new AnnotationConfigApplicationContext(AppConfig.class);
         //Obtenemos el bean 'holaMundo'

@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Ejecutora_XML {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Aperturamos el contexto de spring con la configuración XML
         ApplicationContext contexto = new ClassPathXmlApplicationContext("beans.xml");
         //Obtenemos el bean 'holaMundo'
